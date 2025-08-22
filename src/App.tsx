@@ -14,7 +14,7 @@ export class App extends Component<{}, State> {
   }
 
   componentWillUnmount() {
-    document.addEventListener('keyup', this.handleKeyUp);
+    document.removeEventListener('keyup', this.handleKeyUp);
   }
 
   handleKeyUp = (event: KeyboardEvent) => {
@@ -28,7 +28,7 @@ export class App extends Component<{}, State> {
       <div className="App">
         <p className="App__message">
           {pressedKey
-            ? `The last pressed key is [Enter]`
+            ? `The last pressed key is ${pressedKey}`
             : 'Nothing was pressed yet'}
         </p>
       </div>
