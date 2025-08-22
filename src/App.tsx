@@ -33,5 +33,5 @@ export class App extends Component<{}, State> {
         </p>
       </div>
     );
-  }
+  };
 }
